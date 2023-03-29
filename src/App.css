@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+
+#nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f04646;
+    width: 100%;
+    height: 60px;
+    padding: 0 30px;
+}
+#logo{
+    font-size: 1.3em;
+    font-family: sans-serif;
+    text-shadow: 2px 2px 5px black;
+}
+#nav-bar a{
+    color: #fff;
+    display: block;
+    padding:15px 5px;
+    font-size: 1em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#nav-menu ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#searchBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+#searchBar input{
+    padding: 5px;
+    height: 30px;
+    outline: none;
+    border: 1px solid black;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+#searchBtn{
+    height: 30px;
+    font-size: 1em;
+    padding: 6px;
+    border:1px solid black;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#hamburger{
+    font-size: 1.8em;
+    color: #fff;
+    display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Card */
+.col::-webkit-scrollbar{
+    width: 0px;
+}
+.col::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+    box-shadow: inset .2px .2px 5px .2px rgb(228, 224, 224);
+}
+.col::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #d4d1d1;
+}
+#newsTitle{
+    margin: 17px auto;
+    text-align: center;
+    background-color:#f04646;
+    width: 97%;
+    color:#fff;
+    font-size: 1.3em;
+    padding: 5px;
+}
+.col{
+    overflow-y: scroll;
+    margin: 15px 0;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card{
+    width: 300px;
+    height: 400px;
+    box-shadow: .1px .1px 6px rgb(101, 100, 100);
+    margin: 10px 5px;
+}
+.card-img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.cardData{
+    padding: 5px 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.cardData h5{
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+.cardData p{
+    font-size: .8em;
+}
+.cardLink{
+    background-color: #f04646;
+    display: inline-block;
+    color: #fff;
+    padding: 5px;
+    font-size: .8em;
+    margin-top: 10px;
+}
+#footItem{
+    width: 100%;
+    background-color: #060d48;
+    color: #fff;
+    padding: 20px 0;
+}
+#footmenu{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+#footmenu p{
+    font-size: .9em;
+    color: #d7d6da;
+}
+#footmenu h5{
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+#footerStrip{
+    text-align: center;
+    color:#d4d1d1;
+    font-size: .9em;
+}
+.icon{
+    font-size: 1.6em;
+    padding: 20px 5px;
+    transition: all .7s ease-in-out;
+}
+
+#facebook:hover{
+    color: rgb(5, 141, 231);
+}
+#instagram:hover{
+    color: rgb(238, 39, 99);
+}
+#twitter:hover{
+    color: #23aaf3;
+}
+#whatsapp:hover{
+    color: #12ce3b;
+}
+
+#spinner{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+/* media query */
+@media screen and (max-width:1173px){
+    #nav-menu{
+        display: block;
+        position: absolute;
+        background-color: black;
+        top: 60px;
+        right: 0;
+        display: none;
+    }
+    #nav-menu ul{
+        display: block;
+        text-align: center;
+    }
+    #hamburger{
+        display: contents;
+    }
+    
 }
